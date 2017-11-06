@@ -23,6 +23,8 @@
   },
   "homepage": "https://github.com/rama41222/SocketIOJustForFun#readme",
   "dependencies": {
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "path": "^0.12.7",
+    "socket.io": "^2.0.4"
   }
 }

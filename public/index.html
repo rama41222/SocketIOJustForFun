@@ -1,1 +1,20 @@
-<h1>Hello</h1>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Bitcoin trading</title>
+</head>
+<body>
+
+<script src="/socket.io/socket.io.js"></script>
+<script>
+    var socket = io('http://127.0.0.1:10000')
+    socket.on('message-from-server',function (evt) {
+        document.body.appendChild(document.createTextNode(evt.message))
+        socket.emit('message-from-client', {
+            message: 'Hello from client'
+        });
+    })
+
+</script>
+</body>
+</html>
